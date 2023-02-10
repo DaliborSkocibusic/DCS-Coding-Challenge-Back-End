@@ -4,13 +4,26 @@
 
 Bits is built upon [Fractal](https://github.com/frctl/fractal), a tool that enables the rapid development of components, templates and pages. Fractal uses a number of ES6 features, so this project requires [Node.js](https://nodejs.org/) v4.0+ to be installed locally. A global install of Gulp is also recommended.
 
-
 # My notes
 
 This uses java and spring details below
 
 Use spring initialzr to create your project
 You'll need: Spring Web, Spring Data JPA, Spring Dev Tools, MySQL Driver
+
+Spring Boot Initialiser[Spring boot initialiser](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.0.2&packaging=jar&jvmVersion=17&groupId=Backend-Application&artifactId=Spring-Backend&name=Spring-Backend&description=Demo%20project%20for%20Spring%20Boot&packageName=Backend-Application.Spring-Backend&dependencies=devtools,web,data-jpa,mysql,sqlserver)
+
+
+
+https://www.geeksforgeeks.org/how-to-run-your-first-spring-boot-application-in-eclipse-ide/
+
+https://www.baeldung.com/spring-boot-failed-to-configure-data-source
+
+add dependenxy to pom
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
 
 ## Installation
 
