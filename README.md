@@ -19,6 +19,8 @@ https://www.geeksforgeeks.org/how-to-run-your-first-spring-boot-application-in-e
 
 https://www.baeldung.com/spring-boot-failed-to-configure-data-source
 
+https://github.com/lokeshgupta1981/Spring-Boot-RestTemplate
+
 add dependenxy to pom
 <dependency>
     <groupId>org.springframework.boot</groupId>
