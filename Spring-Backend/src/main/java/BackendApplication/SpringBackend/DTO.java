@@ -4,18 +4,17 @@ import org.springframework.data.annotation.Id;
 
 public class DTO {
 
-	public DTO () {
-		
-	}
-	
-
     public DTO(String description, String details, boolean done) {
         this.description = description;
         this.details = details;
         this.done = done;
     }
 
-    @Id
+    public DTO(String cleanedName, String cleanedElement, Integer hp, Integer attackPower) {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Id
     private Long id;
 
     private String description;
