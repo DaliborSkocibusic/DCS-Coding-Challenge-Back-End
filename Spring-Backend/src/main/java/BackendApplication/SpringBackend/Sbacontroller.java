@@ -88,7 +88,7 @@ import org.springframework.web.bind.annotation.RestController;
 		
 		return "In here";
 		
-		
+// THIS NEEDS TO CHANGE NEXT. NEED TO UPDATE DB		
 //		DTO createdPokemon = this.service.create(data);
 //		return new ResponseEntity<>(createdPokemon, HttpStatus.CREATED);
 	}
