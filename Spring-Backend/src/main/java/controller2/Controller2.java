@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 // Annotation
 @RestController
-@RequestMapping(path = "/hello")
+@RequestMapping(path = "/hello6")
  
 // Class
 public class Controller2 {

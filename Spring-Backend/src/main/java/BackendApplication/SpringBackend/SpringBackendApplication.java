@@ -8,6 +8,9 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import controller2.*;
+
+// Need to add controllers in seperater packages.. Maybe. 
 
 @SpringBootApplication
 @RestController

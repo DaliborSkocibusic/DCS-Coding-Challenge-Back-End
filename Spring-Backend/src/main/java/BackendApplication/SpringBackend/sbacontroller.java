@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  
 // Class
 public class sbacontroller {
-	@RequestMapping(path="/hello")
+	@RequestMapping(path="/hello3")
  
     @ResponseBody
  

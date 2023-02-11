@@ -21,6 +21,8 @@ https://www.baeldung.com/spring-boot-failed-to-configure-data-source
 
 https://github.com/lokeshgupta1981/Spring-Boot-RestTemplate
 
+https://reflectoring.io/spring-cors/
+
 add dependenxy to pom
 <dependency>
     <groupId>org.springframework.boot</groupId>
