@@ -67,7 +67,23 @@ import org.springframework.web.bind.annotation.RestController;
 	
 //	@PostMapping(value = "/build", consumes = {"text/plain"})
 	
-	@PostMapping
+//	@PostMapping
+	
+	// THIS WORKS !!! Need this in postman
+	
+	// http://localhost:8080/build
+	// Body > Raw > Select JSON (ON the right side)
+	
+//	{
+//	    "name": "Bob",
+//	    "element" : "Fire",
+//	    "hp" : 60,
+//	    "attackPower": 10
+//	}
+	
+	// 
+	@PostMapping(value = "/build", consumes = {"application/JSON"})
+
 	public String create(@Valid @RequestBody CreateDTO data) {
 		
 		return "In here";
