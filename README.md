@@ -29,6 +29,20 @@ add dependenxy to pom
     <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 
+## Stuff I have done since
+
+Created Azure SQL database
+Configured it in spring with JDBC
+Doesnt break, but havent confirmed working
+Followed Micforoft os guide to configure spring
+
+## Todo
+chreate schema
+create dto
+create controller
+create repo
+
+
 ## Installation
 
 To get the project up and running, and view components in the browser, complete the following steps:

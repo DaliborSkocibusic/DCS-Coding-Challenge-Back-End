@@ -40,6 +40,40 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+<!--		    <version>5.9.2</version>
+-->		    <scope>test</scope>
+		</dependency>
+		
+				<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-test</artifactId>
+<!--		    <version>3.0.2</version>
+-->		    <scope>test</scope>
+		</dependency>
+
+
+		
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+<!--		    <version>4.13.2</version> Really douesnt like version specs...
+-->		    <scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-commons -->
+		
+		<dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-commons</artifactId>
+		<!--    <version>3.0.1</version> Duplicate import somewhere. -->
+		</dependency>
 
 <!--		
 		Probably going to use Azure SQL instead
@@ -49,12 +83,6 @@
 			<scope>runtime</scope>
 		</dependency>-->
 		
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 
 	</dependencies>
 

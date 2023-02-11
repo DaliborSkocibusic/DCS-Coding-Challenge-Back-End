@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import controller2.*;
 
+// Source: https://www.programiz.com/java-programming/packages-import
+
 // Need to add controllers in seperater packages.. Maybe. 
 
 @SpringBootApplication
@@ -23,7 +25,7 @@ public class SpringBackendApplication {
 	
 	@GetMapping(path="/")
 	public List<String> hello() {
-		return List.of("Hello", "world");
+		return List.of("Hell", "world");
 	}
 
 }
