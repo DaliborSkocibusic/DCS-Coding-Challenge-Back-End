@@ -1,9 +1,13 @@
 package DCS.Backend.Users;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+
+@CrossOrigin(origins= {"*"}, maxAge = 4800)
 public class UserCreateDTO {
 
 	@NotBlank

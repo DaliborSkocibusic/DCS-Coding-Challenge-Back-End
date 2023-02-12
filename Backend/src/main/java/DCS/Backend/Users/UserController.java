@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 @RestController
 
 // This is what happens when we enter localhost:8080/user
-
+@CrossOrigin(origins = "http://localhost:8080")
 @RequestMapping("/User")
 public class UserController {
 
@@ -29,6 +29,8 @@ public class UserController {
 
 	// This is what happens when we enter localhost:8080/user with a get request. 
 	// JSON will be ignored
+   @CrossOrigin(origins= {"*"}, maxAge = 4800 )
+
 	@GetMapping
 	public ResponseEntity<List<User>> all() {
 		List<User> allUser = this.service.all();
