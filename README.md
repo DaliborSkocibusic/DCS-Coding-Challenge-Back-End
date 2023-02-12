@@ -13,7 +13,8 @@ You'll need: Spring Web, Spring Data JPA, Spring Dev Tools, MySQL Driver
 
 Spring Boot Initialiser[Spring boot initialiser](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.0.2&packaging=jar&jvmVersion=17&groupId=Backend-Application&artifactId=Spring-Backend&name=Spring-Backend&description=Demo%20project%20for%20Spring%20Boot&packageName=Backend-Application.Spring-Backend&dependencies=devtools,web,data-jpa,mysql,sqlserver)
 
-
+new one
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.0.2&packaging=jar&jvmVersion=17&groupId=DCS&artifactId=Backend&name=Backend&description=DCS%20Spring%20Boot%20Backend&packageName=DCS.Backend&dependencies=devtools,web,mysql,validation,data-jpa
 
 https://www.geeksforgeeks.org/how-to-run-your-first-spring-boot-application-in-eclipse-ide/
 
@@ -25,8 +26,8 @@ https://reflectoring.io/spring-cors/
 
 add dependenxy to pom
 <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-web</artifactId>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 
 ## Stuff I have done since
@@ -37,11 +38,11 @@ Doesnt break, but havent confirmed working
 Followed Micforoft os guide to configure spring
 
 ## Todo
+
 chreate schema
 create dto
 create controller
 create repo
-
 
 ## Installation
 

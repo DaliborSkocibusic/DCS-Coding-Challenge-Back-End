@@ -1,10 +1,11 @@
-package BackendApplication.SpringBackend;
+package DCS.Backend.Users;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
-public class CreateDTO {
+public class UserCreateDTO {
+
 	@NotBlank
 	String name, element;
 
@@ -16,7 +17,7 @@ public class CreateDTO {
 	@Min(5)
 	Integer attackPower;
 
-	public CreateDTO(@NotBlank String name, @NotBlank String element, @NotNull @Min(50) Integer hp,
+	public UserCreateDTO(@NotBlank String name, @NotBlank String element, @NotNull @Min(50) Integer hp,
 			@NotNull @Min(5) Integer attackPower) {
 		this.name = name;
 		this.element = element;
@@ -55,7 +56,5 @@ public class CreateDTO {
 	public void setAttackPower(Integer attackPower) {
 		this.attackPower = attackPower;
 	}
-}
 
-// Source: Alex Pokemon Spring course
-// https://github.com/nology-tech/mexico-consultancy/blob/main/code-alongs/spring/mexicospringfull/src/main/java/io/noloy/mexicospringfull/pokemon/PokemonCreateDTO.java
+}
