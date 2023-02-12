@@ -18,18 +18,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+
+// This is what happens when we enter localhost:8080/user
+
 @RequestMapping("/User")
 public class UserController {
 
 	@Autowired
 	private UserService service;
 
+	// This is what happens when we enter localhost:8080/user with a get request. 
+	// JSON will be ignored
 	@GetMapping
 	public ResponseEntity<List<User>> all() {
 		List<User> allUser = this.service.all();
 		return new ResponseEntity<>(allUser, HttpStatus.OK);
 	}
 
+	// This is what happens when we enter localhost:8080/user/2 with a get request. 
+	// JSON will be ignored
 	@GetMapping("/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
 		Optional<User> maybeUser = this.service.findById(id);
@@ -42,27 +49,32 @@ public class UserController {
 
 	}
 
-	@PostMapping("/{id}/full-heal")
-	public ResponseEntity<User> findAndHeal(@PathVariable Long id) {
-		boolean isHealed = this.service.heal(id);
+	// This is what happens when we enter localhost:8080/user/5/full-heal with a post request. 
+	// JSON will be ignored. 
+	
+//	@PostMapping("/{id}/full-heal")
+//	public ResponseEntity<User> findAndHeal(@PathVariable Long id) {
+//		boolean isHealed = this.service.heal(id);
+//
+//		if (isHealed) {
+//			return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+//		}
+//		return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+//	}
 
-		if (isHealed) {
-			return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
-		}
-		return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-	}
+//	@PostMapping("/attack")
+//	public ResponseEntity<User> attack(@Valid @RequestBody UserAttackDTO data) {
+//		boolean isSuccess = this.service.attack(data.getAttackerId(), data.getVictimId());
+//
+//		if (isSuccess) {
+//			return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+//		}
+//		return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+//
+//	}
 
-	@PostMapping("/attack")
-	public ResponseEntity<User> attack(@Valid @RequestBody UserAttackDTO data) {
-		boolean isSuccess = this.service.attack(data.getAttackerId(), data.getVictimId());
-
-		if (isSuccess) {
-			return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
-		}
-		return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-
-	}
-
+	// This is what happens when we enter localhost:8080/user with a post request. 
+	// JSON will be need to be correct, bad JSON = 400 bad request error. 
 	@PostMapping
 	public ResponseEntity<User> create(@Valid @RequestBody UserCreateDTO data) {
 
@@ -70,6 +82,8 @@ public class UserController {
 		return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
 	}
 
+	// This is what happens when we enter localhost:8080/user with a delete request. 
+	// JSON will be ignored. No content 204 if successful. 404 otherwise. 
 	@DeleteMapping("/{id}")
 	public ResponseEntity<User> delete(@PathVariable Long id) {
 		boolean isDeleted = this.service.delete(id);

@@ -6,6 +6,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class User{
@@ -14,38 +17,34 @@ public class User{
 	Long id;
 
 	@Column
-	String name;
+	String firstName;
 	@Column
-	String element;
+	String middleName;
 	@Column
-	Integer level;
+	String lastName;
 	@Column
-	Integer hp;
+	Integer contractLength;
 	@Column
-	Integer attackPower;
-	@Column
-	Integer remainingHp;
+	String emailAddress;
 
 	public User() {
 
 	}
 
-	public User(String name, String element, Integer hp, Integer attackPower) {
-		this.name = name;
-		this.element = element;
-		this.hp = hp;
-		this.attackPower = attackPower;
-		this.level = 1;
-		this.remainingHp = hp;
+	public User(
+			String firstName,
+			String middleName,
+			String lastName,
+			Integer contractLength,
+			String emailAddress) {
+	
+	this.firstName = firstName;
+	this.middleName = middleName;
+	this.lastName = lastName;
+	this.contractLength = contractLength;
+	this.emailAddress = emailAddress;
 	}
 
-	public Integer getRemainingHp() {
-		return remainingHp;
-	}
-
-	public void setRemainingHp(Integer remainingHp) {
-		this.remainingHp = remainingHp;
-	}
 
 	public Long getId() {
 		return id;
@@ -54,44 +53,45 @@ public class User{
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	public String getName() {
-		return name;
+	
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setfirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getElement() {
-		return element;
+	
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setElement(String element) {
-		this.element = element;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public String getMiddleName() {
+		return middleName;
+	}
+	
+	public Integer getContractLength() {
+		return contractLength;
 	}
 
-	public Integer getLevel() {
-		return level;
+	public void setcontractLength(Integer contractLength) {
+		this.contractLength = contractLength;
 	}
 
-	public void setLevel(Integer level) {
-		this.level = level;
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
+	
+	public String getEmailAddress() {
+		return emailAddress;
 	}
 
-	public Integer getHp() {
-		return hp;
-	}
-
-	public void setHp(Integer hp) {
-		this.hp = hp;
-	}
-
-	public Integer getAttackPower() {
-		return attackPower;
-	}
-
-	public void setAttackPower(Integer attackPower) {
-		this.attackPower = attackPower;
+	public void setemailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 }

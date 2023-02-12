@@ -7,54 +7,67 @@ import jakarta.validation.constraints.NotNull;
 public class UserCreateDTO {
 
 	@NotBlank
-	String name, element;
+	String firstName, lastName, emailAddress;
+	
+	String middleName;
 
 	@NotNull
-	@Min(50)
-	Integer hp;
+	@Min(1)
+	Integer contractLength;
 
-	@NotNull
-	@Min(5)
-	Integer attackPower;
-
-	public UserCreateDTO(@NotBlank String name, @NotBlank String element, @NotNull @Min(50) Integer hp,
-			@NotNull @Min(5) Integer attackPower) {
-		this.name = name;
-		this.element = element;
-		this.hp = hp;
-		this.attackPower = attackPower;
+	public UserCreateDTO(
+			@NotBlank String firstName,
+			String middleName,
+			@NotBlank String lastName, 
+			@NotNull @Min(50) Integer contractLength,
+			@NotNull String emailAddress) {
+		
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
+		this.contractLength = contractLength;
+		this.emailAddress = emailAddress;
 	}
 
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setfirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getElement() {
-		return element;
+	
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setElement(String element) {
-		this.element = element;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public String getMiddleName() {
+		return middleName;
+	}
+	
+	public Integer getContractLength() {
+		return contractLength;
 	}
 
-	public Integer getHp() {
-		return hp;
+	public void setcontractLength(Integer contractLength) {
+		this.contractLength = contractLength;
 	}
 
-	public void setHp(Integer hp) {
-		this.hp = hp;
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
+	
+	public String getEmailAddress() {
+		return emailAddress;
 	}
 
-	public Integer getAttackPower() {
-		return attackPower;
-	}
-
-	public void setAttackPower(Integer attackPower) {
-		this.attackPower = attackPower;
+	public void setemailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
 }
