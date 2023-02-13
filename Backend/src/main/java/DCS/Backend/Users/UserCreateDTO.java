@@ -16,14 +16,18 @@ public class UserCreateDTO {
 	String middleName;
 
 	@NotNull
-	@Min(1)
+	@Min(0)
 	Integer contractLength;
+	
+	
+//	Whats being passed into dTO
+//	inputs = {firstName: 'firstName', middleName: 'middleName', lastName: 'lastName', contractLength: 1, emailAddress: 'example@example.com'}
 
 	public UserCreateDTO(
 			@NotBlank String firstName,
 			String middleName,
 			@NotBlank String lastName, 
-			@NotNull @Min(50) Integer contractLength,
+			@NotNull @Min(0) Integer contractLength,
 			@NotNull String emailAddress) {
 		
 		this.firstName = firstName;
