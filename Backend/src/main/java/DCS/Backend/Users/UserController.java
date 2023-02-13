@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @RestController
 
 // This is what happens when we enter localhost:8080/user
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins= {"*"}, maxAge = 4800, exposedHeaders = {"Access-Control-Allow-Origin","Access-Control-Allow-Credentials"})
 @RequestMapping("/User")
 public class UserController {
 
