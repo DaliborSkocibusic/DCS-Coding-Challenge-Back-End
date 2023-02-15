@@ -64,16 +64,6 @@ public class UserController {
 		return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
 	}
 
-//	@PostMapping("/attack")
-//	public ResponseEntity<User> attack(@Valid @RequestBody UserAttackDTO data) {
-//		boolean isSuccess = this.service.attack(data.getAttackerId(), data.getVictimId());
-//
-//		if (isSuccess) {
-//			return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
-//		}
-//		return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-//
-//	}
 
 	// This is what happens when we enter localhost:8080/user with a post request. 
 	// JSON will be need to be correct, bad JSON = 400 bad request error. 
