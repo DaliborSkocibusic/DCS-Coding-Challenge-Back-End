@@ -49,42 +49,18 @@ public class UserService {
 		return true;
 	}
 
-//	public boolean heal(Long id) {
-//		Optional<User> maybeUser = this.findById(id);
-//
-//		if (maybeUser.isEmpty()) {
-//			return false;
-//		}
-//
-//		User foundUser = maybeUser.get();
-//		Integer maxHp = foundUser.getHp();
-//		foundUser.setRemainingHp(maxHp);
-//		this.repository.save(foundUser);
-//		return true;
-//	}
+	
+	// This doesnt work. Right now it just creates a new user. 
+	public boolean findAndUpdate(Long id, User data) {
+		Optional<User> maybeUser = this.findById(id);
 
-//	public boolean attack(Long attackerId, Long victimId) {
-//
-//		if (attackerId == victimId)
-//			return false;
-//
-//		Optional<User> maybeAttacker = this.findById(attackerId);
-//		Optional<User> maybeVictim = this.findById(victimId);
-//
-//		if (maybeAttacker.isEmpty() || maybeVictim.isEmpty()) {
-//			return false;
-//		}
-//
-//		User attacker = maybeAttacker.get();
-//		User victim = maybeVictim.get();
-//
-//		// TODO elements logic;
-//		Integer remainingHp = victim.getRemainingHp() - attacker.getAttackPower();
-//		remainingHp = remainingHp < 0 ? 0 : remainingHp;
-//
-//		victim.setRemainingHp(remainingHp);
-//		this.repository.save(victim);
-//		return true;
-//
-//	}
+		if (maybeUser.isEmpty()) {
+			return false;
+		}
+
+		User updatedUser = data;
+		this.repository.save(updatedUser);
+		return true;
+	}
+
 }

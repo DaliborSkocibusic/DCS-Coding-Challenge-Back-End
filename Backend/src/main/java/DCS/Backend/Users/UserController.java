@@ -54,15 +54,15 @@ public class UserController {
 	// This is what happens when we enter localhost:8080/user/5/full-heal with a post request. 
 	// JSON will be ignored. 
 	
-//	@PostMapping("/{id}/full-heal")
-//	public ResponseEntity<User> findAndHeal(@PathVariable Long id) {
-//		boolean isHealed = this.service.heal(id);
-//
-//		if (isHealed) {
-//			return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
-//		}
-//		return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-//	}
+	@PostMapping("/{id}")
+	public ResponseEntity<User> findAndUpdate(@PathVariable Long id) {
+		Optional<User> isExistingUser = this.service.findById(id);
+
+		if (isExistingUser != null ) {
+			return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+	}
 
 //	@PostMapping("/attack")
 //	public ResponseEntity<User> attack(@Valid @RequestBody UserAttackDTO data) {
